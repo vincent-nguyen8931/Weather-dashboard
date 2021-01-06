@@ -1,0 +1,16 @@
+/* Makes landing page header the center of attention at the top of the page */
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#weatherBoard {
+  margin-top: 7rem;
+}
