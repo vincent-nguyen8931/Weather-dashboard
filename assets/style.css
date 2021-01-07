@@ -14,3 +14,18 @@ h1 {
 #weatherBoard {
   margin-top: 7rem;
 }
+
+#searchBarTitle {
+  background-color: lightsalmon;
+  border: black 1px solid; 
+}
+
+li {
+  list-style: none;
+  border: black 1px solid; 
+}
+
+#currentDayBox {
+  border: black 1px solid; 
+  margin-left: 5%;
+}
