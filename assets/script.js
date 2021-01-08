@@ -57,8 +57,8 @@ $("#searchButton").click(function () {
 $("#weatherBoard").on("click", "li", (function () {
   // use textContent instead of text due to this returning an object.
   var cityClicked = this.textContent;
-
-  // setJSON(cityClicked, cityClicked);
+  // stores data to local storage
+  setJSON(cityClicked, cityClicked);
 
   var currentDayWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityClicked + "&units=imperial&appid=e0901fe692dc490e882d515f8c2d9a11";
 
@@ -100,8 +100,13 @@ $("#weatherBoard").on("click", "li", (function () {
     url: fiveDayForecastURL,
     method: "GET"
   }).then(function (fiveDay) {
+    // empties out the columns to prevent duplication of forecast boxes.
     $("#fiveDayForecastBoxCol").empty();
+
+    // iterates through the api and chooses noon weather for the next five days.
     for (i = 3; i < 40; i += 8) {
+
+      // fills out the data for each card that appears with forecast information with each iteration excluding the header that only appears once.
       fiveDayForecastHeader.text("5 Day Forecast:");
       var fiveDayForecastCard = $("<div>").attr("class", "card text-white bg-primary mb col-fluid").attr("style", "float:left;padding: 10px;padding-right: 15px;padding-bottom:0;");
       var fiveDayForecastDate = $("<h3>").text(dayjs(fiveDay.list[i].dt_txt).format("M/DD/YYYY"));
@@ -112,6 +117,7 @@ $("#weatherBoard").on("click", "li", (function () {
       fiveDayForecastCard.append(fiveDayForecastDate, fiveDayForecastImage, fiveDayForecastTemperature, fiveDayForecastHumidity);
     }
   });
+  // Adds border to current day weather to make the "box" appear only when the city is clicked.
   cityCurrentDay.attr("style", "border: black 1px solid;")
 
 })
