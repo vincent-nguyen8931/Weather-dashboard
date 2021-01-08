@@ -1,12 +1,11 @@
 # Weather-dashboard
 
-![image](Day-planner-landing-page.png)
+![image](assets\Weather-dashboard-landing-page.png)
 
 Description
 ------------
 
-Day planner of a 9-5 schedule. Allows for storage of input within each text box as long as the save button is clicked. Information will remain in the textboxes even after the browser is closed. 
-
+Weather dashboard that displays current weather and 5 day forecast for the city of your choosing. Enter in the city name and 
  Table of contents
 ---------------
 [Tools used](#Tools-used)<br />

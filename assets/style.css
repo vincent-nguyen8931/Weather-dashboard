@@ -23,20 +23,26 @@ ul, li {
   margin-top: 7rem;
 }
 
-#searchBarTitle {
+#searchBarCol {
   background-color: rgb(248, 249, 250);
   border: black 1px solid; 
 }
 
 #currentDayBox, .card {
   font-family: 'Open Sans', sans-serif;
+  padding-bottom: 10px;
   margin-left: 3%;
   font-size: 18px;
 }
 
+.icon-search {
+  background-color: rgb(0, 123, 255);
+  color: white;
+}
+
 #fiveDayForecastBoxes {
   font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   margin-left: 3%;
   margin-top: 2%;
 }
