@@ -11,21 +11,37 @@ h1 {
   right: 0;
 }
 
+h2, h3 {
+  font-weight: bold;
+}
+
+ul, li {
+  font-family: 'Open Sans', sans-serif;
+}
+
 #weatherBoard {
   margin-top: 7rem;
 }
 
 #searchBarTitle {
-  background-color: lightsalmon;
+  background-color: rgb(248, 249, 250);
   border: black 1px solid; 
 }
 
-li {
-  list-style: none;
-  border: black 1px solid; 
+#currentDayBox, .card {
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 3%;
+  font-size: 18px;
 }
 
-#currentDayBox {
-  border: black 1px solid; 
-  margin-left: 5%;
+#fiveDayForecastBoxes {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-left: 3%;
+  margin-top: 2%;
 }
+
+/* .card {
+  font-family: 'Open Sans', sans-serif;
+  margin-left
+} */
