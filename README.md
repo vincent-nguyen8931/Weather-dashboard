@@ -1,6 +1,6 @@
 # Weather-dashboard
 
-![image](assets\Weather-dashboard-landing-page.png)
+![image](.\assets\Weather-dashboard-landing-page.png)
 
 Description
 ------------
