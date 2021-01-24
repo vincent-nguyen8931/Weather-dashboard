@@ -9,9 +9,9 @@ function getJSON(key) {
   return JSON.parse(window.localStorage.getItem(key));
 }
 
-// for (i = 0; i < cityClicked.length; i++) {
-// cityListCreation.prepend(getJSON(cityClicked));
-// }
+
+j = 0;
+
 
 // holds code of the applicaiton
 var weatherBoardMain = $("#weatherBoard");
@@ -46,10 +46,18 @@ fiveDayForecastContainer.append(fiveDayForecastHeader, fiveDayForecastBoxCol);
 searchBarCol.append(searchBarTitle, searchBarInputCol, cityListCreation);
 searchBarInputCol.append(searchBarText, searchBarButton);
 
+for (i = 0; i < localStorage.length; i++) {
+  cityListCreation.prepend($("<li>").attr("class", "list-group-item").text(getJSON(i)));
+  j++
+  }
+
+
 // search button to prepend input to city list on click. Makes new searches appear at the top of the list.
 $("#searchButton").click(function () {
   var cityToAdd = $("<li>").attr("class", "list-group-item").text(searchBarText.val());
   cityListCreation.prepend(cityToAdd);
+  setJSON(j, searchBarText.val());
+  j++
 });
 
 // By use of .on for the click event, this allows for the document to continue looking for click events to happen to a li even if one does not presently exist. This method was chosen due to the li being created dynamically and not having static placeholders.
@@ -58,7 +66,7 @@ $("#weatherBoard").on("click", "li", (function () {
   // use textContent instead of text due to this returning an object.
   var cityClicked = this.textContent;
   // stores data to local storage
-  setJSON(cityClicked, cityClicked);
+ 
 
   var currentDayWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityClicked + "&units=imperial&appid=e0901fe692dc490e882d515f8c2d9a11";
 
