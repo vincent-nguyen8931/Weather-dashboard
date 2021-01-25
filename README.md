@@ -14,6 +14,7 @@ Weather dashboard that displays current weather and 5 day forecast for the city 
 [Features](#Features)
 * [Search input](#Search-input)
 * [Continuous on click](#Continuous-on-click)
+* [Local storage](#Local-storage)
 * [Current weather](#Current-weather)
 * [Five day forecast](#Five-day-forecast)
 
@@ -66,6 +67,10 @@ Clicking will be read continually to listen for list items. This was used to hav
 $("#weatherBoard").on("click", "li", (function ()
 ```
 
+Local storage
+-----------------
+The list of cities generated upon searching is stored in local storage. This allows for the user to return to the webpage and still have their list of locations previously searched to be saved.
+
 Current weather
 -----------
 Weather is called from Open Weather API and pulled into the application via AJAX. From here the work to append the current weather data can be performed.
@@ -110,7 +115,6 @@ Lessons learned
 ---------------
 Proper container usage would have prevented an earlier problem I ran into where as the list expanded, the five day forecast continued to get pushed down the page. With assistance from the TA, we were able to reorganize my containers and have proper container usage to prevent this from happening as well as having proper headers within my information boxes.
 
-Local storage for this assignment eludes me a bit as I was capable of storing the information to local storage via the city's name, however I had no means of retrieving the information and populating list.
 
 Credits
 ---------------
