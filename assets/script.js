@@ -9,9 +9,8 @@ function getJSON(key) {
   return JSON.parse(window.localStorage.getItem(key));
 }
 
-
+// var set to give local storage id numbers
 j = 0;
-
 
 // holds code of the applicaiton
 var weatherBoardMain = $("#weatherBoard");
@@ -46,11 +45,11 @@ fiveDayForecastContainer.append(fiveDayForecastHeader, fiveDayForecastBoxCol);
 searchBarCol.append(searchBarTitle, searchBarInputCol, cityListCreation);
 searchBarInputCol.append(searchBarText, searchBarButton);
 
+// Fills list of searched cities on page load based on local storage
 for (i = 0; i < localStorage.length; i++) {
   cityListCreation.prepend($("<li>").attr("class", "list-group-item").text(getJSON(i)));
   j++
   }
-
 
 // search button to prepend input to city list on click. Makes new searches appear at the top of the list.
 $("#searchButton").click(function () {
